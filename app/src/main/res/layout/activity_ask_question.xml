@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AskQuestion">
+
+    <EditText
+        android:id="@+id/ask_ques"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:hint="Question"/>
+
+    <RadioGroup
+        android:id="@+id/no_text_radio_group"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ask_ques">
+
+        <RadioButton
+            android:id="@+id/ask1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <RadioButton
+            android:id="@+id/ask2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <RadioButton
+            android:id="@+id/ask3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <RadioButton
+            android:id="@+id/ask4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </RadioGroup>
+
+
+    <EditText
+        android:id="@+id/et1"
+        android:layout_width="379dp"
+        android:layout_height="32dp"
+        android:background="@android:color/transparent"
+        android:hint="Option 1"
+        android:inputType="text"
+        app:layout_constraintStart_toEndOf="@+id/no_text_radio_group"
+        app:layout_constraintTop_toBottomOf="@+id/ask_ques" />
+
+    <EditText
+        android:id="@+id/et2"
+        android:layout_width="379dp"
+        android:layout_height="32dp"
+        android:background="@android:color/transparent"
+        android:hint="Option 2"
+        android:inputType="text"
+        app:layout_constraintStart_toEndOf="@+id/no_text_radio_group"
+        app:layout_constraintTop_toBottomOf="@+id/et1" />
+
+    <EditText
+        android:id="@+id/et3"
+        android:layout_width="379dp"
+        android:layout_height="32dp"
+        app:layout_constraintStart_toEndOf="@+id/no_text_radio_group"
+        app:layout_constraintTop_toBottomOf="@+id/et2"
+        android:hint="Option 3"
+        android:background="@android:color/transparent"
+        android:inputType="text"/>
+
+    <EditText
+        android:id="@+id/et4"
+        android:layout_width="379dp"
+        android:layout_height="32dp"
+        android:background="@android:color/transparent"
+        android:hint="Option 4"
+        android:inputType="text"
+        app:layout_constraintStart_toEndOf="@+id/no_text_radio_group"
+        app:layout_constraintTop_toBottomOf="@+id/et3" />
+
+    <Button
+        android:id="@+id/set_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+
+        android:layout_marginEnd="68dp"
+        android:text="set"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/et4" />
+
+    <Button
+        android:id="@+id/cancel_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:text="Cancel"
+        app:layout_constraintEnd_toStartOf="@+id/set_btn"
+        app:layout_constraintHorizontal_bias="0.395"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/et4" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
